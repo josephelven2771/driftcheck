@@ -69,6 +69,18 @@ services:
     memory_limit: 256Mi
 ```
 
+You can also specify ignored fields that should be excluded from drift comparison:
+
+```yaml
+services:
+  api-gateway:
+    replicas: 3
+    memory_limit: 512Mi
+    ignore:
+      - last_deployed
+      - build_sha
+```
+
 ---
 
 ## License
